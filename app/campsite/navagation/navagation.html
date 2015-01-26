@@ -1,0 +1,10 @@
+<h3><span class="glyphicon glyphicon-road"></span>&nbsp;Navigation and Proximity</h3>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info"><strong>Lat &amp; Lon:</strong> {{campsite.lat}}  {{campsite.lon}}</li>
+    <li class="list-group-item list-group-item-info"><strong>Elevation:</strong> {{campsite.elevation}} ft</li>
+    <li class="list-group-item list-group-item-info"><strong>Closest town:</strong> {{campsite.closest_town_name}} <small><a href="#" data-toggle="tooltip" data-placement="top" title="Get Google Map directions from campsite."><span class="glyphicon glyphicon-map-marker"></span>{{campsite.closest_town_distance}} miles</a></small></li>
+    <li class="list-group-item list-group-item-info"><strong>Closest Propane Fill:</strong> {{campsite.closest_propane_name}} <small><a href="#" data-toggle="tooltip" data-placement="top" title="Get Google Map directions from campsite."><span class="glyphicon glyphicon-map-marker"></span>{{campsite.closest_propane_distance}} miles</a></small></li>
+    <li class="list-group-item list-group-item-info"><strong>Closest Gas Station:</strong> {{campsite.closest_fuel_name}} <small><a href="#" data-toggle="tooltip" data-placement="top" title="Get Google Map directions from campsite."><span class="glyphicon glyphicon-map-marker"></span>{{campsite.closest_fuel_distance}} miles</a></small></li>
+    <li class="list-group-item list-group-item-info"><strong>Closest Dump Station:</strong> {{campsite.closest_dump_name}} <small><a href="#" data-toggle="tooltip" data-placement="top" title="Get Google Map directions from campsite."><span class="glyphicon glyphicon-map-marker"></span>28 miles</a></small></li>
+    <li class="list-group-item list-group-item-info"><strong>Distance From Paved Road:</strong> {{campsite.paved_road_distance}} miles  - {{campsite.paved_road_name}}</li>
+</ul>

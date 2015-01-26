@@ -1,0 +1,85 @@
+
+<div class="container">
+
+    <h1>{{campsite.title}} <small><i>Last Updated: {{campsite.update_ts}}</i></small></h1>
+    <ol class="breadcrumb">
+        <li><a href="#">{{campsite.region}}</a></li>
+        <li><a href="#">{{campsite.state}}</a></li>
+        <li class="active">{{campsite.county}}</li>
+        <li class="active">{{campsite.title}}</li>
+    </ol>
+    <div class="well">
+        {{campsite.shortdesc}}
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="images/test/cotton1.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="images/test/cotton2.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="images/test/cotton3.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="images/test/cotton4.jpg" alt="...">
+            </a>
+        </div>
+
+    </div>
+    <p>&nbsp;</p>
+    <h2>Site Description</h2>
+    {{campsite.longdesc}}
+    <p>&nbsp;</p>
+   <!--
+    <iframe
+            width="98%"
+            height="450"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB_KdwMCjpdCIREnupyEgU0uva_F0jT31U
+    &q={{campsite.lat}},{{campsite.lon}}">
+    </iframe>
+    -->
+
+    <p>&nbsp;</p>
+
+    <h2>Detailed Information</h2>
+    <div boondockr-navagation campsite="{{campsite}}"></div>
+    <p>&nbsp;</p>
+
+    <div boondockr-camp-information campsite="{{campsite}}"></div>
+    <p>&nbsp;</p>
+
+    <div boondockr-rules campsite="{{campsite}}"></div>
+
+    <p>&nbsp;</p>
+
+    <div boondockr-cell-coverage campsite="{{campsite}}"></div>
+
+
+    <p>&nbsp;</p>
+    <h2>Tags <small>(keywords)</small></h2>
+    <span class="label label-primary">Oregon</span>
+    <span class="label label-primary">State Park</span>
+    <span class="label label-primary">Gravel</span>
+    <span class="label label-primary">Big-Rig-Friendly</span>
+    <span class="label label-primary">Hiking</span>
+    <span class="label label-primary">Biking</span>
+    <span class="label label-primary">Fishing</span>
+    <span class="label label-primary">River</span>
+    <span class="label label-primary">Assigned-spots</span>
+    <span class="label label-primary">Canyon</span>
+    <span class="label label-primary">Paid</span>
+    <span class="label label-primary">Water</span>
+
+    <p>&nbsp;</p>
+</div>
+<!-- /container -->
