@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="boondockr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="boondockr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="boondockr" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="boondockr" class="no-js"> <!--<![endif]-->
-
 <head>
   <title>BoonDockr</title>
   <meta charset="utf-8">
@@ -16,6 +11,7 @@
 
   <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="../node_modules/bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+    <script data-main="/main.js" src="/node_modules/requirejs/require.js"></script>
   <style type="text/css">
     body {
       min-height: 2000px;
@@ -35,32 +31,15 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="/bower_components/angular/angular.js"></script>
-  <script src="/bower_components/angular-route/angular-route.js"></script>
-  <script src="core/app.js"></script>
-  <script src="core/header.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="sotw/sotw.js"></script>
-  <script src="search/search.js"></script>
-  <script src="about/about.js"></script>
-  <script src="home/home.js"></script>
-  <script src="campsite/campsite.js"></script>
-  <script src="campsite/ObtainCampsite.js"></script>
-  <script src="campsite/cellcoverage/cellcoverage.js"></script>
-  <script src="campsite/rules/rules.js"></script>
-  <script src="campsite/navagation/navigation.js"></script>
-  <script src="campsite/campinformation/campinformation.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+
+
+
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../node_modules/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!--   <script src="../node_modules/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>-->
+
 </body>
 </html>
