@@ -1,13 +1,13 @@
 'use strict';
 
-define(['search'], function (app) {
+define("search/search", ['core/app'], function (app) {
 
 
     angular.module('boondockr.search', ['ngRoute'])
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/search', {
-                templateUrl: 'search/search.html',
+                templateUrl: 'templates/search.html',
                 controller: 'SearchCtrl'
             });
         }])

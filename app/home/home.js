@@ -1,13 +1,13 @@
 'use strict';
 
 
-define(['home'], function (app) {
+define("home/home", ['core/app'], function (app) {
 
     angular.module('boondockr.home', ['ngRoute'])
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/home', {
-                templateUrl: 'home/home.html',
+                templateUrl: 'templates/home.html',
                 controller: 'HomeCtrl'
             });
         }])

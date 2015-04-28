@@ -1,17 +1,14 @@
 'use strict';
 
-define(['about'], function (app) {
+define("about/about",['core/app'], function (app) {
 
     angular.module('boondockr.about', ['ngRoute'])
-
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/about', {
-                templateUrl: 'about/about.html',
+                templateUrl: 'templates/about.html',
                 controller: 'AboutCtrl'
             });
         }])
-
-
         .controller('AboutCtrl', ['$scope', function ($scope) {
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()

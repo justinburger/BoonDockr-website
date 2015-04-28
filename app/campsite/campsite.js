@@ -1,11 +1,11 @@
 'use strict';
-define(['campsite'], function (app) {
+define("campsite/campsite",['core/app'], function (app) {
 
     angular.module('boondockr.campsite', ['ngRoute', 'boondockr.ObtainCampsite'])
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/campsite/:campName', {
-                templateUrl: 'campsite/campsite.html',
+                templateUrl: 'templates/campsite.html',
                 controller: 'CampsiteCtrl'
             });
         }])

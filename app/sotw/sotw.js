@@ -1,11 +1,11 @@
 'use strict';
 
-define(['sotw'], function (app) {
+define("sotw/sotw", ['core/app'], function (app) {
     angular.module('boondockr.sotw', ['ngRoute'])
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/sotw', {
-                templateUrl: 'sotw/sotw.html',
+                templateUrl: 'templates/sotw.html',
                 controller: 'SotwCtrl'
             });
         }])
