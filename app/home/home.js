@@ -7,7 +7,7 @@ define("home/home", ['core/app'], function (app) {
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/home', {
-                templateUrl: 'templates/home.html',
+                templateUrl: 'home/home.html',
                 controller: 'HomeCtrl'
             });
         }])

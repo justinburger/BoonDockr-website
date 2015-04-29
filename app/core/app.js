@@ -10,12 +10,7 @@ define("core/app",[
         'search/search',
         'about/about',
         'home/home',
-        'campsite/campsite',
-        'campsite/ObtainCampsite',
-        'campsite/campinformation',
-        'campsite/cellcoverage',
-        'navigation/navigation',
-        "rules/rules"
+        'campsite/campsite'
     ],
     function (angularAMD, angularRoute, jquery, bootstrap) {
           var boondockr = angular.module('boondockr', [
@@ -26,10 +21,26 @@ define("core/app",[
             'boondockr.about',
             'boondockr.home',
             'boondockr.campsite',
-            'boondockr.ObtainCampsite'
+            'boondockr.obtainCampsite'
           ]);
+
+        /**
+         * Route Provider Setup
+         */
+        boondockr.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.when('/about', {
+                templateUrl: 'about/about.html'
+            })
+        }]);
+
+        boondockr.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.when('/campsite/:campName', {
+                templateUrl: 'campsite/campsite.html'
+            });
+        }])
+
         boondockr.config(['$routeProvider', function($routeProvider) {
-                $routeProvider.otherwise({redirectTo: '/view1'});
+                $routeProvider.otherwise({redirectTo: '/home'});
               }]);
 
 

@@ -7,7 +7,7 @@ define("search/search", ['core/app'], function (app) {
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/search', {
-                templateUrl: 'templates/search.html',
+                templateUrl: 'search/search.html',
                 controller: 'SearchCtrl'
             });
         }])

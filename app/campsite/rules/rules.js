@@ -1,11 +1,7 @@
 'use strict';
 
-define("rules/rules", ['core/app',
-    'angularAMD',
-    'angular-route',
-    'jquery',
-    'bootstrap'], function (app) {
-require(['core/app'],function(app){
+define("campsite/rules/rules", ['core/app'], function (app) {
+    require(['core/app'],function(app) {
         app.directive('boondockrRules', function () {
             return {
                 templateUrl: 'campsite/rules/rules.html',
@@ -15,6 +11,4 @@ require(['core/app'],function(app){
             }
         });
     });
-
 });
-

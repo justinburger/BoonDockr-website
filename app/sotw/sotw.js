@@ -5,7 +5,7 @@ define("sotw/sotw", ['core/app'], function (app) {
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/sotw', {
-                templateUrl: 'templates/sotw.html',
+                templateUrl: 'sotw/sotw.html',
                 controller: 'SotwCtrl'
             });
         }])

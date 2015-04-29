@@ -1,6 +1,6 @@
 
-define("campsite/ObtainCampsite",['core/app'], function (app) {
-    var ObtainCampsite = angular.module('boondockr.ObtainCampsite', []);
+define("campsite/obtaincampsite/obtaincampsite",['core/app'], function (app) {
+    var ObtainCampsite = angular.module('boondockr.obtainCampsite', []);
 
     ObtainCampsite.factory('campsiteService', function ($http) {
         return {
