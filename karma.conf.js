@@ -16,13 +16,13 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'app/js/test-main.js', included: true},
-      {pattern: 'app/contrib/require.js', included: true},
-
+      {pattern: 'bower_components/**/*.js', included: false},
       {pattern: 'app/contrib/*.js', included: false},
       {pattern: 'app/contrib/**/*.js', included: false},
       {pattern: 'node_modules/bootstrap/dist/js/bootstrap.min.js', included: false},
-      {pattern: 'bower_components/**/*.js', included: false},
+
       {pattern: 'app/**/*.js', included: false},
+      {pattern: 'app/core/app.js', included: false},
       {pattern: 'app/js/test/*.js', included: false},
 
     ],
@@ -30,6 +30,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      'app/js/main.js'
     ],
 
 
