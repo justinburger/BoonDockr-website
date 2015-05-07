@@ -1,7 +1,7 @@
 'use strict';
 define("campsite/campsite",
             ['core/app',
-            'services/campsiteServices',
+            '../services/campsiteServices',
             'campsite/campinformation/campinformation',
             'campsite/cellcoverage/cellcoverage',
             'campsite/navigation/navigation',
