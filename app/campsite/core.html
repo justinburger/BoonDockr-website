@@ -1,5 +1,16 @@
+
+
 <div class="container" ng-controller="CampsiteCtrl">
-    <h1>{{campsite.title}} <small style="font-size:50%;"><i>Last Updated: {{campsite.update_ts}}</i></small></h1>
+    <div ng-if="campsite.error == 'Not Found'">
+        <h1>Campsite Not Found <small>Typo? Try our <a href="/app/#/search">Search</a> feature.</small></h1>
+    </div>
+
+    <div ng-show="campsite.error != 'Not Found'">
+
+    <h1><div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-picture"></span> </button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone"></span></button>
+    </div>&nbsp;&nbsp;{{campsite.title}} <small style="font-size:50%;"><i>Last Updated: {{campsite.update_ts||"Unknown"}}</i></small></h1>
 
     <div boondockr-bread-crumb campsite="{{campsite}}"></div>
 
@@ -30,4 +41,5 @@
 
     <div boondockr-tags campsite="{{campsite}}"></div>
     <p>&nbsp;</p>
+        </div>
 </div>

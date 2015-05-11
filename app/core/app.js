@@ -1,12 +1,11 @@
 'use strict';
 
 define("core/app",[
+        'angular',
         'angularAMD',
         'angular-route',
         'jquery',
         'bootstrap',
-        'facebook',
-        'ngfacebook',
         'core/header',
         'sotw/sotw',
         'search/search',
@@ -17,10 +16,9 @@ define("core/app",[
         'campsite/campsite',
         'campsite/mock/mock'
     ],
-    function (angularAMD, angularRoute, jquery, bootstrap) {
+    function (angularz, angularAMD, angularRoute, jquery, bootstrap) {
           var boondockr = angular.module('boondockr', [
             'ngRoute',
-            'ngFacebook',
             'boondockr.header',
             'boondockr.sotw',
             'boondockr.search',

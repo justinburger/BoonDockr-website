@@ -1,4 +1,2 @@
 <h2>Tags <small>(keywords)</small></h2>
-<span ng-repeat="tag in campsite.tags">
-    <span class="label label-primary">{{tag}}</span>&nbsp;
-    </span>
+<span ng-repeat="tag in campsite.tags"><a href="/search/tag/{{tag}}"><span class="label label-primary">{{tag}}</span></a>&nbsp;</span>
