@@ -17,6 +17,8 @@ define("campsite/campsite",
                     $('[data-toggle="tooltip"]').tooltip()
                 })
 
+                $scope.defaultMode = false;
+                $scope.mobileMode = true;
 
                 campsiteService.getCampsiteDetailBasedOnURLName($routeParams.campName)
                     .then(function (data) {
