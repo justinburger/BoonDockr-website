@@ -8,7 +8,8 @@ define("campsite/campsite",
             'campsite/breadcrumb/breadcrumb',
             'campsite/images/images',
             'campsite/tags/tags',
-            'campsite/rules/rules'],
+            'campsite/rules/rules',
+            'campsite/imageInspectorModelImageIcon/imageInspectorModelImageIcon'],
     function (app) {
         angular.module('boondockr.campsite', ['ngRoute', 'boondockr.campsiteServices'])
             .controller('CampsiteCtrl', ['$scope', 'campsiteService', '$routeParams', function ($scope, campsiteService, $routeParams) {

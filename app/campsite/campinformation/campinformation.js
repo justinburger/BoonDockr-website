@@ -8,6 +8,7 @@ define("campsite/campinformation/campinformation",
                     templateUrl: 'campsite/campinformation/campinformation.html',
                     controller: function ($scope, $element, $attrs) {
                         $scope.campsite = $attrs.campsite;
+                        $scope.imageInspectorModelImageId =0;
                     }
                 }
             });

@@ -5,10 +5,201 @@
                 <input type="text" class="form-control" placeholder="Search for...">
       <span class="input-group-btn">
         <button class="btn btn-success" type="button">Search!</button>
-        <button class="btn btn-danger" type="button">Advanced Search</button>
+        <button class="btn btn-danger" type="button" ng-click="toggleAdvancedPane()">Advanced Search</button>
       </span>
             </div>
+<p>&nbsp;</p>
+    <div class="panel panel-default" ng-show="displayAdvancedPane">
+        <div class="panel-body">
+            <h2>Advanced Search</h2>
 
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Amenities</h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Fire Pits
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Onsite Dump Station
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Picnic Benches
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Restrooms
+                        </label>
+                    </div>
+<div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Dumpsters
+                        </label>
+                    </div>
+<div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Recyling
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Potable water
+                        </label>
+                    </div>
+                    <h4>Cell Coverage</h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> AT&amp;T
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Verizon
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Sprint
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-4">
+
+
+
+                    <h4>Ownership</h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> BLM
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> State Parks
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> National Parks
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Private Land
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Other
+                        </label>
+                    </div>
+
+                    <h4>Seasons</h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Year Round
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Winter
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Spring
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Summer
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Fall
+                        </label>
+                    </div>
+
+
+
+            </div>
+
+                <div class="col-md-4">
+                    <h4>Region</h4>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Distance In Miles">
+                            <div class="input-group-addon">From </div>
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Zipcode">
+                        </div>
+                    </div>
+
+                    <h4>Distance</h4>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Distance In Miles">
+                            <div class="input-group-addon">From Gas Station</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Distance In Miles">
+                            <div class="input-group-addon">From Dump Station</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Distance In Miles">
+                            <div class="input-group-addon">From Paved Road</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Distance In Miles">
+                            <div class="input-group-addon">From Closest Propane Fill</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Distance In Miles">
+                            <div class="input-group-addon">From Closest Town</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+        </div>
+    </div>
+        </div>
 
     <!-- Results -->
 <p>&nbsp;</p>

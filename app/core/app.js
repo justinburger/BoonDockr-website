@@ -40,10 +40,17 @@ define("core/app",[
         }]);
 
         boondockr.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.when('/sotw', {
+                controller: 'SotwCtrl',
+                template: 'Please Wait...'
+            });
+        }]);
+
+        boondockr.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/campsite/:campName', {
                 templateUrl: 'campsite/campsite.html'
             });
-        }])
+        }]);
 
         boondockr.config(['$routeProvider', function($routeProvider) {
                 $routeProvider.otherwise({redirectTo: '/home'});

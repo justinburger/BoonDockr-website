@@ -17,5 +17,16 @@ define("search/search", ['core/app'], function (app) {
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             })
+
+            $scope.toggleAdvancedPane = function(){
+                if($scope.displayAdvancedPane){
+                    $scope.displayAdvancedPane = false;
+                    return;
+                }
+
+                $scope.displayAdvancedPane = true;
+                return;
+
+            };
         }]);
 });

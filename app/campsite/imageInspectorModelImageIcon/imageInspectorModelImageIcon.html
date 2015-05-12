@@ -1,0 +1,14 @@
+
+
+<span ng-repeat="image in myCampsite.images">
+    <span ng-if="image.category == category">
+            <span ng-click="setImageInspectorModelId(image.id)" class="glyphicon glyphicon-picture" data-toggle="modal" data-target="#imageInspectorModel{{image.id}}"></span>
+        <div id="imageInspectorModel{{image.id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <img ng-src="http://devapi.boondockr.com/image/{{imageInspectorModelImageId}}" style="width:100%;"/>
+                </div>
+            </div>
+        </div>
+    </span>
+</span>

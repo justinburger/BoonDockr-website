@@ -1,6 +1,6 @@
 'use strict';
 
-define("services/campsiteServices", [],
+define("services/campsiteServices", ['angular'],
     function (app) {
         angular.module('boondockr.campsiteServices', ['ngRoute'])
             .factory('campsiteService', function ($http) {
@@ -14,6 +14,14 @@ define("services/campsiteServices", [],
                      */
                     getCampsiteDetailBasedOnURLName: function (campName) {
                         return $http.get('http://devapi.boondockr.com/campsite/' + campName)
+                            .then(
+                            function (response) {
+                                return response.data;
+                            }
+                        )
+                    },
+                    getSOTW: function(){
+                        return $http.get('http://devapi.boondockr.com/setting/sotw')
                             .then(
                             function (response) {
                                 return response.data;
