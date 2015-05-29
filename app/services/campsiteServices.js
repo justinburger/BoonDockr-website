@@ -20,6 +20,14 @@ define("services/campsiteServices", ['angular'],
                             }
                         )
                     },
+                    getSupportedCountiesByState: function(state){
+                        return $http.get('http://devapi.boondockr.com/counties/' + state)
+                            .then(
+                            function (response) {
+                                return response.data;
+                            }
+                        )
+                    },
                     getSOTW: function(){
                         return $http.get('http://devapi.boondockr.com/setting/sotw')
                             .then(

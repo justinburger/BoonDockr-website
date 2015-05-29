@@ -9,6 +9,7 @@ define("core/app",[
         'core/header',
         'sotw/sotw',
         'search/search',
+        'browse/browse',
         'about/about',
         'home/home',
         'login/login',
@@ -21,6 +22,7 @@ define("core/app",[
             'ngRoute',
             'boondockr.header',
             'boondockr.sotw',
+            'boondockr.browse',
             'boondockr.search',
             'boondockr.about',
             'boondockr.home',
@@ -36,6 +38,12 @@ define("core/app",[
         boondockr.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/about', {
                 templateUrl: 'about/about.html'
+            })
+        }]);
+
+        boondockr.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.when('/browse', {
+                templateUrl: 'browse/browse.html'
             })
         }]);
 

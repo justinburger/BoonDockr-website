@@ -1,0 +1,62 @@
+<div class="container"  ng-controller="BrowseCtrl">
+    <h1 class="title">Browse campsite</h1>
+    <p class="lead">You can browse the reviewed campsites by drilling down on Regon, State & County. If you'd like more control, try out the <a href="#/search">Search</a> page.</p>
+    <p>&nbsp;</p>
+    <ol class="breadcrumb">
+        <li>Region:
+            <select
+                    ng-model="regionSelected"
+                    ng-change="refreshStatesList(regionList[regionSelected-1])"
+                    ng-options="region.id as region.name for region in regionList">
+            </select>
+        </li>
+        <li>State:
+            <select
+
+                ng-model="stateSelected"
+                ng-change="updateCountyList(stateSelected)">
+                    <option ng-repeat="state in stateList|filter:filterStatesByRegion" value="{{state.code}}">{{state.name}}</option>
+
+
+        </select>
+        </li>
+        <li>County: <select ng-model="county"
+                            ng-options="county.county for county in counties">>
+
+        </select></li>
+
+    </ol>
+    <!-- Results -->
+    <p>&nbsp;</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Site Name</th>
+            <th>State</th>
+            <th>Terrian</th>
+            <th>Cost</th>
+            <th>Ownership</th>
+            <th>Campsite Type</th>
+            <th>Max Stay</th>
+            <th>Cellphone Coverage</th>
+            <th>Distance from paved road</th>
+            <th>Pics</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Cottonwood Canyon</td>
+            <td>Oregon</td>
+            <td>Desert, Limited Tree Cover</td>
+            <td>$6/night</td>
+            <td>Oregon State Parks</td>
+            <td>Assigned</td>
+            <td>14 days</td>
+            <td>None.</td>
+            <td>&lt; 1 mile.</td>
+            <td>...</td>
+        </tr>
+    </table>
+
+
+
+</div>

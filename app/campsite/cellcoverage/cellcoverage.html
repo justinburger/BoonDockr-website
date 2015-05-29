@@ -1,31 +1,31 @@
 <h3><span class="glyphicon glyphicon-signal"></span>&nbsp;Cellphone Coverage</h3>
 <ul class="list-group">
     <li class="list-group-item"><strong>AT&amp;T:</strong>
-        <span ng-if="campsite.cell_att_coverage == 'no'" class="label label-default">No Service</span>
-        <span ng-if="campsite.cell_att_coverage == 'yes' && campsite.cell_att_coverage_type != 'Voice Only'" class="label label-success">{{campsite.cell_att_coverage_type}}</span>
-        <span ng-if="campsite.cell_att_coverage == 'yes' && campsite.cell_att_coverage_type == 'Voice Only'" class="label label-danger">{{campsite.cell_att_coverage_type}}</span>
-        <span ng-if="campsite.cell_att_coverage == 'yes'">(Signal Strength: {{campsite.cell_att_coverage_strength}} out of 100)</span>
-        <small ng-if="campsite.cell_att_coverage == 'yes'">{{campsite.cell_att_coverage_comments}}</small>
+        <span ng-if="campsite.cellAttCoverage != 'yes'" class="label label-default">No Service</span>
+        <span ng-if="campsite.cellAttCoverage == 'yes' && campsite.cellAttCoverageType != 'Voice Only'" class="label label-success">{{campsite.cellAttCoverageType}}</span>
+        <span ng-if="campsite.cellAttCoverage == 'yes' && campsite.cellAttCoverageType == 'Voice Only'" class="label label-danger">{{campsite.cellAttCoverageType}}</span>
+        <span ng-if="campsite.cellAttCoverage == 'yes'">(Signal Strength: {{campsite.cellAttCoverageStrength}} out of 100)</span>
+        <small ng-if="campsite.cellAttCoverage == 'yes'">{{campsite.cellAttCoverageComments}}</small>
     </li>
     <li class="list-group-item"><strong>Sprint:</strong>
-        <span ng-if="campsite.cell_sprint_coverage == 'no'" class="label label-default">No Service</span>
-        <span ng-if="campsite.cell_sprint_coverage == 'yes' && campsite.cell_sprint_coverage_type != 'Voice Only'" class="label label-success">{{campsite.cell_sprint_coverage_type}}</span>
-        <span ng-if="campsite.cell_sprint_coverage == 'yes' && campsite.cell_sprint_coverage_type == 'Voice Only'" class="label label-danger">{{campsite.cell_sprint_coverage_type}}</span>
-        <span ng-if="campsite.cell_sprint_coverage == 'yes'">(Signal Strength: {{campsite.cell_sprint_coverage_strength}} out of 100)</span>
-        <small ng-if="campsite.cell_sprint_coverage == 'yes'">{{campsite.cell_sprint_coverage_comments}}</small>
+        <span ng-if="campsite.cellSprintCoverage != 'yes'" class="label label-default">No Service</span>
+        <span ng-if="campsite.cellSprintCoverage == 'yes' && campsite.cellSprintCoverageType != 'Voice Only'" class="label label-success">{{campsite.cellSprintCoverageType}}</span>
+        <span ng-if="campsite.cellSprintCoverage == 'yes' && campsite.cellSprintCoverageType == 'Voice Only'" class="label label-danger">{{campsite.cellSprintCoverageType}}</span>
+        <span ng-if="campsite.cellSprintCoverage == 'yes'">(Signal Strength: {{campsite.cellSprintCoverageStrength}} out of 100)</span>
+        <small ng-if="campsite.cellSprintCoverage == 'yes'">{{campsite.cellSprintCoverageComments}}</small>
     </li>
     <li class="list-group-item"><strong>TMobile:</strong>
-        <span ng-if="campsite.cell_tmobile_coverage == 'no'" class="label label-default">No Service</span>
-        <span ng-if="campsite.cell_tmobile_coverage == 'yes' && campsite.cell_tmobile_coverage_type != 'Voice Only'" class="label label-success">{{campsite.cell_tmobile_coverage_type}}</span>
-        <span ng-if="campsite.cell_tmobile_coverage == 'yes' && campsite.cell_tmobile_coverage_type == 'Voice Only'" class="label label-danger">{{campsite.cell_tmobile_coverage_type}}</span>
-        <span ng-if="campsite.cell_tmobile_coverage == 'yes'">(Signal Strength: {{campsite.cell_tmobile_coverage_strength}} out of 100)</span>
-        <small ng-if="campsite.cell_tmobile_coverage == 'yes'">{{campsite.cell_tmobile_coverage_comments}}</small>
+        <span ng-if="campsite.cellTmobileCoverage != 'yes'" class="label label-default">No Service</span>
+        <span ng-if="campsite.cellTmobileCoverage == 'yes' && campsite.cellTmobileCoverageType != 'Voice Only'" class="label label-success">{{campsite.cellTmobileCoverageType}}</span>
+        <span ng-if="campsite.cellTmobileCoverage == 'yes' && campsite.cellTmobileCoverageType == 'Voice Only'" class="label label-danger">{{campsite.cellTmobileCoverageType}}</span>
+        <span ng-if="campsite.cellTmobileCoverage == 'yes'">(Signal Strength: {{campsite.cellTmobileCoverageStrength}} out of 100)</span>
+        <small ng-if="campsite.cellTmobileCoverage == 'yes'">{{campsite.cellTmobileCoverageComments}}</small>
     </li>
     <li class="list-group-item"><strong>Verizon:</strong>
-        <span ng-if="campsite.cell_verizon_coverage == 'no'" class="label label-default">No Service</span>
-        <span ng-if="campsite.cell_verizon_coverage == 'yes' && campsite.cell_verizon_coverage_type != 'Voice Only'" class="label label-success">{{campsite.cell_verizon_coverage_type}}</span>
-        <span ng-if="campsite.cell_verizon_coverage == 'yes' && campsite.cell_verizon_coverage_type == 'Voice Only'" class="label label-danger">{{campsite.cell_verizon_coverage_type}}</span>
-        <span ng-if="campsite.cell_verizon_coverage == 'yes'">(Signal Strength: {{campsite.cell_verizon_coverage_strength}} out of 100)</span>
-        <small ng-if="campsite.cell_verizon_coverage == 'yes'">{{campsite.cell_verizon_coverage_comments}}</small>
+        <span ng-if="campsite.cellVerizonCoverage != 'yes'" class="label label-default">No Service</span>
+        <span ng-if="campsite.cellVerizonCoverage == 'yes' && campsite.cellVerizonCoverageType != 'Voice Only'" class="label label-success">{{campsite.cellVerizonCoverageType}}</span>
+        <span ng-if="campsite.cellVerizonCoverage == 'yes' && campsite.cellVerizonCoverageType == 'Voice Only'" class="label label-danger">{{campsite.cellVerizonCoverageType}}</span>
+        <span ng-if="campsite.cellVerizonCoverage == 'yes'">(Signal Strength: {{campsite.cellVerizonCoverageStrength}} out of 100)</span>
+        <small ng-if="campsite.cellVerizonCoverage == 'yes'">{{campsite.cellVerizonCoverageComments}}</small>
     </li>
 </ul>
