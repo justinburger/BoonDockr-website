@@ -11,6 +11,22 @@ define("services/campsiteSearch", ['angular'],
                         }
 
                         return true;
+                    },
+                    getCampsitesByRegionStateCounty: function(region, state, county){
+                        var searchParams = {
+                            searchParams:{
+                                state: {
+                                    value:state,
+                                    range:'equals'
+                                }
+                            }
+                        }
+                        return $http.post('http://devapi.boondockr.com/search', searchParams)
+                            .then(
+                            function (response) {
+                                return response.data;
+                            }
+                        )
                     }
                 };
             });

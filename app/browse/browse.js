@@ -1,12 +1,19 @@
 'use strict';
 
-define("browse/browse", ['core/app', '../services/campsiteServices'], function (app) {
+define("browse/browse",
+    [
+        'core/app',
+        '../services/campsiteServices',
+        'campsiteList/campsiteList',
+        'services/campsiteSearch'
+    ],
+    function (app) {
 
-
-    angular.module('boondockr.browse', ['ngRoute','boondockr.campsiteServices'])
-        .controller('BrowseCtrl', ['$scope', 'campsiteService', function ($scope, campsiteService) {
+    angular.module('boondockr.browse', ['ngRoute','boondockr.campsiteServices','boondockr.campsiteSearch'])
+        .controller('BrowseCtrl', ['$scope', 'campsiteService','campsiteSearch', function ($scope, campsiteService, campsiteSearch) {
             $scope.regionSelected = 1;
             $scope.counties = [];
+            $scope.campsites = [];
 
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
@@ -91,6 +98,13 @@ define("browse/browse", ['core/app', '../services/campsiteServices'], function (
                         $scope.counties = data;
                         return;
                     });
+            }
+
+            $scope.updateCampsiteList = function(region, state, county){
+                campsiteSearch.getCampsitesByRegionStateCounty(region, state, county) .then(function (data) {
+                    $scope.campsites = data;
+                    return;
+                });
             }
 
             $scope.filterStatesByRegion = function(state){

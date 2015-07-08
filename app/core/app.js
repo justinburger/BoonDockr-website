@@ -82,6 +82,12 @@ define("core/app",[
             });
         }]);
 
+        boondockr.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.when('/admin', {
+                templateUrl: 'admin/admin.html'
+            });
+        }]);
+
 
 
         return angularAMD.bootstrap(boondockr);

@@ -16,18 +16,20 @@
                 ng-model="stateSelected"
                 ng-change="updateCountyList(stateSelected)">
                     <option ng-repeat="state in stateList|filter:filterStatesByRegion" value="{{state.code}}">{{state.name}}</option>
-
-
         </select>
         </li>
-        <li>County: <select ng-model="county"
-                            ng-options="county.county for county in counties">>
-
-        </select></li>
-
+        <li>County:
+            <select
+                ng-model="countySelected"
+                ng-options="county.county for county in counties"
+                ng-change="updateCampsiteList(regionList[regionSelected-1].name, stateSelected, countySelected )"
+            >
+            </select></li>
     </ol>
     <!-- Results -->
     <p>&nbsp;</p>
+    <div campsite-list campsites-results="{{campsites}}"></div>
+
     <table class="table table-striped">
         <thead>
         <tr>
@@ -43,20 +45,19 @@
             <th>Pics</th>
         </tr>
         </thead>
-        <tr>
-            <td>Cottonwood Canyon</td>
-            <td>Oregon</td>
-            <td>Desert, Limited Tree Cover</td>
-            <td>$6/night</td>
-            <td>Oregon State Parks</td>
-            <td>Assigned</td>
-            <td>14 days</td>
+        <tr ng-repeat="campsite in campsites">
+            <td><a ng-href="/app/#/campsite/{{campsite.urlName}}">{{campsite.title}}</a></td>
+            <td>{{campsite.state}}</td>
+            <td>{{campsite.terrian}}</td>
+            <td>{{campsite.cost}}</td>
+            <td>{{campsite.ownership}}</td>
+            <td>{{campsite.campsiteType}}</td>
+            <td>{{campsite.maxStay}}</td>
             <td>None.</td>
-            <td>&lt; 1 mile.</td>
+            <td>{{campsite.pavedRoadDistance}}</td>
             <td>...</td>
         </tr>
     </table>
-
 
 
 </div>
