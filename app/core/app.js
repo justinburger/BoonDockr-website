@@ -18,7 +18,11 @@ define("core/app",[
         'campsite/mock/mock'
     ],
     function (angularz, angularAMD, angularRoute, jquery, bootstrap) {
-          var boondockr = angular.module('boondockr', [
+
+        angular.module('boondockr.settings', [])
+            .constant('ENDPOINT_URL', 'http://boondockr-services-dev2.elasticbeanstalk.com/');
+
+        var boondockr = angular.module('boondockr', [
             'ngRoute',
             'boondockr.header',
             'boondockr.sotw',
@@ -91,7 +95,11 @@ define("core/app",[
 
 
         return angularAMD.bootstrap(boondockr);
-});
+
+}
+);
+
+
 
 
 

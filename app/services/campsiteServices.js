@@ -2,8 +2,8 @@
 
 define("services/campsiteServices", ['angular'],
     function (app) {
-        angular.module('boondockr.campsiteServices', ['ngRoute'])
-            .factory('campsiteService', function ($http) {
+        angular.module('boondockr.campsiteServices', ['ngRoute','boondockr.settings'])
+            .factory('campsiteService', function ($http,ENDPOINT_URL) {
                 return {
                     /**
                      * Get Campsite Detail Based on URL Name
@@ -13,7 +13,8 @@ define("services/campsiteServices", ['angular'],
                      * @returns {*} JSON value of campsite information if exists.
                      */
                     getCampsiteDetailBasedOnURLName: function (campName) {
-                        return $http.get('http://devapi.boondockr.com/campsite/' + campName)
+
+                        return $http.get(ENDPOINT_URL +'/campsite/' + campName)
                             .then(
                             function (response) {
                                 return response.data;
@@ -21,7 +22,7 @@ define("services/campsiteServices", ['angular'],
                         )
                     },
                     getSupportedCountiesByState: function(state){
-                        return $http.get('http://devapi.boondockr.com/counties/' + state)
+                        return $http.get(ENDPOINT_URL +'/counties/' + state)
                             .then(
                             function (response) {
                                 return response.data;
@@ -29,7 +30,7 @@ define("services/campsiteServices", ['angular'],
                         )
                     },
                     getSOTW: function(){
-                        return $http.get('http://devapi.boondockr.com/setting/sotw')
+                        return $http.get(ENDPOINT_URL +'/setting/sotw')
                             .then(
                             function (response) {
                                 return response.data;

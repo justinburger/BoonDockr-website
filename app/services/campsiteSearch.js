@@ -2,8 +2,8 @@
 
 define("services/campsiteSearch", ['angular'],
     function (app) {
-        angular.module('boondockr.campsiteSearch', ['ngRoute'])
-            .factory('campsiteSearch', function ($http) {
+        angular.module('boondockr.campsiteSearch', ['ngRoute','boondockr.settings'])
+            .factory('campsiteSearch', function ($http,ENDPOINT_URL) {
                 return {
                     basicSearch: function (searchText) {
                         if (searchText == ''){
@@ -21,7 +21,7 @@ define("services/campsiteSearch", ['angular'],
                                 }
                             }
                         }
-                        return $http.post('http://devapi.boondockr.com/search', searchParams)
+                        return $http.post(ENDPOINT_URL + '/search', searchParams)
                             .then(
                             function (response) {
                                 return response.data;
