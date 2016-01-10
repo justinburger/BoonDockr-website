@@ -21,7 +21,7 @@ define("services/campsiteSearch", ['angular'],
                                 }
                             }
                         }
-                        return $http.post(ENDPOINT_URL + '/search', searchParams)
+                        return $http.post(ENDPOINT_URL + 'search', searchParams)
                             .then(
                             function (response) {
                                 return response.data;

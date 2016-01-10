@@ -6,6 +6,7 @@ define("core/app",[
         'angular-route',
         'jquery',
         'bootstrap',
+        'core/config',
         'core/header',
         'sotw/sotw',
         'search/search',
@@ -17,10 +18,7 @@ define("core/app",[
         'campsite/campsite',
         'campsite/mock/mock'
     ],
-    function (angularz, angularAMD, angularRoute, jquery, bootstrap) {
-
-        angular.module('boondockr.settings', [])
-            .constant('ENDPOINT_URL', 'http://boondockr-services-dev2.elasticbeanstalk.com/');
+    function (a, angularAMD, angularRoute, jquery, bootstrap) {
 
         var boondockr = angular.module('boondockr', [
             'ngRoute',
@@ -89,6 +87,12 @@ define("core/app",[
         boondockr.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/admin', {
                 templateUrl: 'admin/admin.html'
+            });
+        }]);
+
+        boondockr.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.when('/admin/edit', {
+                templateUrl: 'admin/edit.html'
             });
         }]);
 

@@ -22,7 +22,7 @@ define("services/campsiteServices", ['angular'],
                         )
                     },
                     getSupportedCountiesByState: function(state){
-                        return $http.get(ENDPOINT_URL +'/counties/' + state)
+                        return $http.get(ENDPOINT_URL +'counties/' + state)
                             .then(
                             function (response) {
                                 return response.data;
