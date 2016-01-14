@@ -29,6 +29,14 @@ define("services/campsiteServices", ['angular'],
                             }
                         )
                     },
+                    getAllCampsites: function(state){
+                        return $http.get(ENDPOINT_URL +'campsites/all')
+                            .then(
+                            function (response) {
+                                return response.data;
+                            }
+                        )
+                    },
                     getSOTW: function(){
                         return $http.get(ENDPOINT_URL +'/setting/sotw')
                             .then(

@@ -3,6 +3,9 @@
 define("browse/browse",
     [
         'core/app',
+        'jquery',
+        'raphael',
+        'usmap',
         '../services/campsiteServices',
         'campsiteList/campsiteList',
         'services/campsiteSearch'
@@ -14,6 +17,31 @@ define("browse/browse",
             $scope.regionSelected = 1;
             $scope.counties = [];
             $scope.campsites = [];
+
+            $('#map2').usmap({
+                'stateStyles': {
+                    fill: '#E5E4D7',
+                    "stroke-width": 2,
+                    'stroke' : '#666666'
+                },
+                'stateSpecificStyles': {
+                    'OR' : {fill: '#92CD00'},
+                    'WA' : {fill: '#92CD00'},
+                    'CA' : {fill: '#92CD00'},
+                    'ID' : {fill: '#92CD00'}
+                },
+                'stateHoverStyles': {
+                    fill: '#0099CC'
+                },
+
+                'click' : function(event, data) {
+                    $('#alert')
+                        .text('Click '+data.name+' on map 2')
+                        .stop()
+                        .css('backgroundColor', '#af0')
+                        .animate({backgroundColor: '#ddd'}, 1000);
+                }
+            });
 
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()

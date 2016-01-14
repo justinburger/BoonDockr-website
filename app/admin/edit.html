@@ -26,8 +26,7 @@
                     <option>5</option>
                 </optgroup>
                 <optgroup label="Remotley Stored Locations">
-                    <option>(1) Cottonwood Canyon, Waso, OR </option>
-                    <option>(2) Cottonwood Canyon, Waso, OR </option>
+                    <option ng-repeat="camp in campsites" value="{{camp.id}}">({{camp.id}}) {{camp.title}}</option>
 
                 </optgroup>
             </select>
