@@ -6,8 +6,6 @@ require.config({
         'angularAMD': '/bower_components/angularAMD/angularAMD.min',
         'bootstrap': '/node_modules/bootstrap/dist/js/bootstrap.min',
         'jquery': '/app/contrib/jquery.min',
-        'usmap': '/app/contrib/usmap',
-        'raphael': '/app/contrib/raphael',
         'facebook': '//connect.facebook.net/en_US/sdk',
         'ngfacebook':'/bower_components/ng-facebook/ngFacebook'
     },

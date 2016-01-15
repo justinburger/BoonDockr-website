@@ -21,6 +21,15 @@ define("services/campsiteServices", ['angular'],
                             }
                         )
                     },
+                    getCampsiteDetailBasedOnID: function (id) {
+
+                        return $http.get(ENDPOINT_URL +'/campsite/' + id)
+                            .then(
+                            function (response) {
+                                return response.data;
+                            }
+                        )
+                    },
                     getSupportedCountiesByState: function(state){
                         return $http.get(ENDPOINT_URL +'counties/' + state)
                             .then(
